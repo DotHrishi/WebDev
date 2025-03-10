@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizzette - Test</title>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&family=Gugi&family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/test.css">
+</head>
+<body>
+    <div class="navbar">
+        <img src="/static/images/quizzette-high-resolution-logo.png">
+        <ul>
+            <li id="timer">Time left</li>
+            <li><button>Request Assistance</button></li>
+        </ul>
+    </div>
+
+    <div class="main">
+        <div class="box">
+            <form method="POST" action="/results" class="questions">
+                {% for question in quiz_data %}
+                <div class="question">
+                    <p>Q ⟫ <strong>{{ question.question }}</strong></p>
+                    {% for option in question.options %}
+                    <label>
+                        <input type="radio" name="{{ question['id'] }}" value="{{ option }}"> {{ option }}
+                    </label><br>
+                    {% endfor %}
+                </div>
+                {% endfor %}
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="assistance">
+        <form action="POST">
+            
+        </form>
+    </div>
+    <script src="/static/js/script.js"></script>
+</body>
+</html>

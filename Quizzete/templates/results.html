@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizzette - Results</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gugi&family=Martel+Sans:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&family=Gugi&family=Martel+Sans:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/results.css">
+</head>
+<body>
+    <div class="navbar">
+        <img src="/static/images/quizzette-high-resolution-logo.png">
+        <ul>
+            <li><a href="{{ url_for('home') }}"><button>Get back to Homepage</button></a></li>
+        </ul>
+    </div>
+    
+    <div class="content1">
+        <div class="result-card">
+            <strong style="font-size: 50px;">RESULTS 📃</strong>
+            <h1>Score: {{ score }}/{{ total }} {{ emoji }}</h1>
+            <h2>Attempted: {{ attempted }}</h2>
+            <h2>✅ Correct Answers: {{ score }}</h2>
+            <h2>❌ Wrong Answers: {{ wrong_count }}</h2>
+            <h2>Unattempted: {{ unattempted }}</h2>
+            <h2>Percentage: {{ percentage }}%</h2>
+        </div>
+        <img src="{{ result }}" alt="Result Analysis">
+    </div>
+
+    <div class="answers">
+        <div>
+            {% for question in questions %}
+            <div class="question">
+                <p>📌 <strong>{{ question.question }}</strong></p>
+                <ul>
+                    {% for option in question.options %}
+                    <li 
+                        {% if option == question.correct_answer %} style="color: green; font-weight: bold;" {% endif %}>
+                        {{ option }}
+                    </li>
+                    {% endfor %}
+                </ul>
+                <p>Your Answer: 
+                    <span 
+                        {% if question.user_answer == question.correct_answer %}
+                            style="color: green;"
+                        {% else %}
+                            style="color: red;"
+                        {% endif %}>
+                        {{ question.user_answer }}
+                    </span>
+                </p>
+                <hr>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    
+</body>
+</html>

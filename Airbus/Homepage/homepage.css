@@ -1,0 +1,106 @@
+footer{
+    background-color: #1b4db8b7;
+    color: rgb(4, 4, 108);
+    text-align: center;
+}
+iframe{
+    width: 100%;
+    height: 100%;
+}
+h2{
+    text-align: center;
+    color: royalblue;
+}
+h2:hover{
+    text-shadow: 1px 1px rgb(210, 210, 255);
+}
+h3{
+    color: rgb(16, 16, 124);
+    padding: 20px;
+    text-align: center;
+}
+article{
+    padding: 40px;
+    background-color: rgb(240, 240, 255);
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-right: 125px;
+    margin-left: 125px;
+}
+article:hover {
+    box-shadow: 5px 5px 5px rgb(210, 210, 255);
+}
+*{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 0px;
+    margin: 0px;
+    line-height: 2;
+}
+button{
+    background-color: rgb(4, 4, 108);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px;
+    border-color: rgb(4, 4, 108);
+    width: 120px;
+    height: 50px;
+}
+a:visited{
+    color: white;
+}
+a:hover{
+    color: rgb(4, 4, 108);
+    text-decoration: wavy;
+}
+header {
+    background-color: #1b4db8b7;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+nav {
+    display: flex;
+}
+.navigation {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+.navigation:hover {
+    text-decoration: underline;
+    color: rgb(4, 4, 108);
+}
+iframe {
+    width: 100%;
+    height: 500px;
+}
+form {
+    padding: 20px;
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    background-color: rgb(240, 240, 255);
+    border-radius: 20px;
+    margin: 30px;
+}
+form:hover {
+    box-shadow: 5px 5px 5px rgb(210, 210, 255);
+}
+section {
+    display: flex;
+    flex-direction: row;
+}
+#table {
+    background-color: rgb(240, 240, 255);
+    padding: 40px;
+    margin-left: 30px;
+    margin-top: 30px;
+    margin-left: 20px;
+    border-radius: 20px;
+}
+#table:hover {
+    box-shadow: 5px 5px 5px rgb(210, 210, 255);
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <link type="stylesheet" href="form.css">
+</head>
+
+<body>
+    <form action="post">
+        <div>
+            <label for="name">Company: </label>
+            <input type="text" id="name" name="name" placeholder="Company name" required="yes">
+        </div>
+        <br>
+        <div>
+            <input type="radio" id="commer" name="pourpose" value="commer"><label for="commer">Commercial</label>
+            <input type="radio" id="noncommer" name="pourpose" value="noncommer"><label for="noncommer">Non - commercial</label>
+        </div>
+        <br>
+        <div>
+            <label for="address">Company address: </label>
+            <textarea id="address" name="address" rows="6" cols="30" required="yes"></textarea>
+        </div>
+        <br>
+        <div>
+            <input type="checkbox" id="agree" name="agree" value="yes" required="yes"><label for="agree">Agree to terms
+                and conditions.</label>
+        </div>
+    </form>
+</body>
+
+</html>

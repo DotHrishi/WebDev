@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizzette - Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gugi&family=Martel+Sans:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&family=Gugi&family=Martel+Sans:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="navbar">
+        <img src="/static/images/quizzette-high-resolution-logo.png">
+        <ul>
+            <li><button>Guidelines</button></li>
+            <li><button>Login</button></li>
+        </ul>
+    </div>
+    <div class="content1">
+        <div class="box1">
+            Give a test 
+            <a href="{{ url_for('test') }}"><button>Start Test</button></a>
+        </div>
+        <div class="box2">
+            Create a test 
+            <button>Create Now</button>
+        </div>
+    </div>
+</body>
+</html>

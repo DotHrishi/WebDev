@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizzette - Configure Quiz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gugi&family=Martel+Sans:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&family=Gugi&family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/configurequiz.css">
+</head>
+<body>
+    <div class="navbar">
+        <img src="/static/images/quizzette-high-resolution-logo.png">
+    </div>
+    <div class="content1">
+        <div class="config-box">
+            <h2>Configure Your Quiz</h2>
+            <form method="POST" action="/configurequiz" id="configForm">
+                <label for="topic">Quiz Topic:</label>
+                <input type="text" id="topic" name="topic" placeholder="e.g., Computer Networks" required>
+
+                <label for="num_questions">Number of Questions:</label>
+                <input type="number" id="num_questions" name="num_questions" min="1" max="50" value="5" required>
+
+                <label for="difficulty">Difficulty Level:</label>
+                <select id="difficulty" name="difficulty" required>
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+
+                <button type="submit">Start Quiz</button>
+            </form>
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p>Generating your quiz...</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('configForm').addEventListener('submit', function() {
+            document.getElementById('loading').style.display = 'block';
+        });
+    </script>
+</body>
+</html>

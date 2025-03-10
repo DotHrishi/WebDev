@@ -1,0 +1,89 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    color: white;
+    font-family: "Gugi", serif;
+}
+
+button {
+    border: none;
+    font-family: "Atkinson Hyperlegible Mono", serif;
+    transition: 0.5s;
+    letter-spacing: 1px;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #00ADB5;
+    padding: 15px;
+    box-shadow: none;
+}
+
+@keyframes click-bounce {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.9); /* Slightly pressed down */
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+button:hover {
+    animation: click-bounce 0.4s ease-in-out;
+}
+
+.navbar {
+    background-color: #000000;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar img {
+    height: 70px;
+    margin: 15px;
+}
+
+.navbar ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin-top: 25px;
+    gap: 40px;
+    font-size: 25px;
+    margin-left: 700px;
+}
+
+body {
+    background-color: #1b222a;
+}
+
+.content1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+}
+
+.content1 button {
+    background-color: #00ADB5;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.box1, .box2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 20px;
+    border: 5px;
+    background-color: #000000;
+    padding: 50px;
+    font-size: 20px;
+    height: 10vh;
+    width: 50vh;
+    margin-top: 50px;
+}
+
