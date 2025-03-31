@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&family=Gugi&family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Orbitron:wght@400..900&display=swap');
+
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+
+/* header {
+  padding: 15px;
+} */
+
+/* .topbar, .bottombar {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 2px;
+  font-style: normal;
+} */
+
+
+body {
+  color: white;
+  background: linear-gradient(135deg,
+    #000000, /* Deep black */
+    #000000, /* Dark metallic gray */
+    #000000  /* Gunmetal gray */
+  );
+  background-size: 400% 400%;
+  animation: fast-glossy-shift 5s ease-in-out infinite;
+}
+
+@keyframes fast-glossy-shift {
+  0% { background-position: 0% 50%; }
+  25% { background-position: 50% 100%; }
+  50% { background-position: 100% 50%; }
+  75% { background-position: 50% 0%; }
+  100% { background-position: 0% 50%; }
+}
+  
+.btn :hover {
+  color: #ff0000;
+}
+
+.topbar {
+    background-color: rgb(0, 0, 0);
+}
+
+.block {
+    margin: 30px;
+}
+
+.block2 {
+    background-color: #5f1344a1;
+    width: 50%;
+}
+
+.newscard {
+    margin: 30px;
+}
+
+.newsscard {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.newsscard:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.upcomrace, .latrace {
+  margin-bottom: 30px;
+}
+
+.racecard {
+  color: rgb(255, 255, 255);
+  background-color: #00000099;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.bottom {
+  margin-top: 50px;
+}
+
+.hover-effect {
+  background: linear-gradient(90deg, #ff00ff, #00ffff, #ff0000);
+  background-size: 400% 400%;
+  background-clip: text;
+  color: transparent;
+  position: relative;
+}
+
+.team-select {
+  display: none;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  background-color: #212529;
+  color: #ffffff;
+  border: 1px solid #495057;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 16px;
+  z-index: 10;
+}
+
+.nav-item.dropdown:hover .team-select {
+  display: block;
+}
+
+.team-select option {
+  background-color: #212529;
+  color: #ffffff;
+}

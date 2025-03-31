@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RaceMetrics - Teams - Mercedes</title>
+    <link rel="stylesheet" href="/static/css/teams.css">
+    <link rel="stylesheet" href="/static/css/navbar.css">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+body {
+  background: linear-gradient(120deg,
+    #00d2be, /* Petronas green */
+    #1c1c1c, /* Deep black */
+    #000000  /* Mercedes silver */
+  );
+  background-size: 250% 250%;
+  animation: mercedes-flow 20s ease-in-out infinite;
+  color: white;
+}
+
+@keyframes mercedes-flow {
+  0% { background-position: 0% 50%; }
+  25% { background-position: 50% 100%; }
+  50% { background-position: 100% 50%; }
+  75% { background-position: 50% 0%; }
+  100% { background-position: 0% 50%; }
+}
+    </style>
+</head>
+
+<body>
+    <header class="p-3 text topbar">
+        <div class="container">
+          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+              <img src="/static/images/Screenshot_2025-03-10_221101-removebg-preview.png" alt="logo" class="headimg">
+            </a>
+    
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+              <li><a href="{{ url_for('home') }}" class="nav-link px-2 text-secondary">Home</a></li>
+              <li><a href="#" class="nav-link px-2 text-white">Features</a></li>
+              <li><a href="{{ url_for('teams_select') }}" class="nav-link px-2 text-white">Teams</a></li>
+              <li><a href="#" class="nav-link px-2 text-white">About</a></li>
+            </ul>
+    
+            <!-- <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+              <input type="search" class="form-control form-control-dark text" placeholder="Search..." aria-label="Search">
+            </form> -->
+    
+            <div class="text-end">
+              <button type="button" class="btn btn-outline-light me-2">Login</button>
+              <button type="button" class="btn btn-primary">Sign-up</button>
+            </div>
+        </div>
+        </div>
+      </header>
+
+    <article>
+        <div>
+            <h1 style="font-size: 50px; padding-bottom: 20px;">Mercedes</h1>
+            <img src="/static/images/teampage-images/Screenshot_2025-03-18_161423-removebg-preview.png" alt="Mercedes Logo" id="teamlogo">
+            <div>
+                <p><strong>Full Team Name:</strong> Mercedes-AMG PETRONAS F1 Team</p>
+                <p><strong>Base:</strong> Brackley, United Kingdom</p>
+                <p><strong>Team Chief:</strong> Toto Wolff</p>
+                <p><strong>Technical Chief:</strong> James Allison</p>
+                <p><strong>Chassis:</strong> W15</p>
+                <p><strong>Power Unit:</strong> Mercedes</p>
+                <p><strong>First Team Entry:</strong> 1970</p>
+                <p><strong>World Championships:</strong> 8</p>
+                <p><strong>Highest Race Finish:</strong> 1 (x120)</p>
+                <p><strong>Pole Positions:</strong> 133</p>
+                <p><strong>Fastest Laps:</strong> 100</p>
+            </div>
+        </div>
+        <aside>
+            <div id="content">
+                <div class="driver-info">
+                    <p id="d1">
+                        <img src="/static/images/teampage-images/hamilton.avif" alt="Lewis Hamilton" class="driver">
+                        <br>
+                        <strong id="driverno">44</strong><br>
+                        <strong>Lewis Hamilton</strong><br>
+                        Mercedes
+                    </p>
+                    <p id="d2">
+                        <img src="/static/images/teampage-images/russell.avif" alt="George Russel" class="driver">
+                        <br>
+                        <strong id="driverno">63</strong><br>
+                        <strong>George Russel</strong><br>
+                        Mercedes
+                    </p>
+                </div>
+                <img src="/static/images/teampage-images/mercedes (1).avif" alt="Mercedes" class="car">
+            </div>
+        </aside>
+    </article>
+
+    <!-- <section id="section1" class="section">
+        <h1>In Profile</h1>
+        <p style="display: flex; flex-direction: row; justify-content: right;">
+            <img src="/static/images/teampage-images/mercedes spark.avif" alt="Team Images"
+                style="padding-right: 30px; height: 250px; width: 450px;">
+            Mercedes’ modern F1 revival started with the creation of a works squad for 2010 - the platform for a
+            meteoric rise up the Grand Prix order. The team generated huge excitement from the off with the sensational
+            return of Michael Schumacher, but headlines soon followed on track: three podiums in their debut season, all
+            via Nico Rosberg - who then claimed a breakthrough pole/victory double at China in 2012. The following
+            season he was paired with Lewis Hamilton, the duo going on to stage some epic title battles as the Silver
+            Arrows swept all before them to become one of the most dominant forces of the modern F1 era – until Red Bull
+            came and stole that crown. Nevertheless, with Hamilton now partnered by proven race-winner George Russell,
+            Mercedes remain very much one of the teams to beat…
+        </p>
+        <h1>2024</h1>
+        <p>
+            Fall to fourth overall despite two wins apiece for George Russell and Lewis Hamilton in the rather
+            inconsistent W15. Season starts with shock announcement that Hamilton is to depart for Ferrari at the end of
+            the year.
+            <a
+                href="https://www.f1authentics.com/f1-memorabilia-shop/by-team/mercedes-amg-petronas-formula-one-team/?utm%5Fsource=f1&utm%5Fmedium=website&utm%5Fcampaign=referral%5Flink">Official
+                Mercedes memorabilia ></a>
+        </p>
+
+        <h1>2023</h1>
+        <p>
+            Fail to win a Grand Prix for the first time since 2011, as W14 proves little better than its predecessor.
+            Nevertheless, relentless development ultimately sees the team clinch second in the standings over Ferrari at
+            the season’s final round.
+        </p>
+
+        <h1>2022</h1>
+        <p>
+            Radical rule changes shake up the order and Mercedes’ W13 lands wide of the mark, leaving them ‘best of the
+            rest’ behind Red Bull and Ferrari. Newcomer George Russell takes their sole victory – and outscores Lewis
+            Hamilton, who goes winless for the first time in his F1 career.
+        </p>
+
+        <h1>2021</h1>
+        <p>
+            Face the biggest challenge yet to their dominance of the turbo-hybrid. Lewis Hamilton loses his drivers’
+            crown to Red Bull’s Max Verstappen, despite winning eight races, as the team just about hang on to the
+            constructors’ title, which they retain for an eighth successive season.
+        </p>
+
+        <h1>2020</h1>
+        <p>
+            Just when you think they can’t get any better, Mercedes – and in particular Lewis Hamilton – step it up
+            another gear. The reigning champion wins 11 races and smashes records galore en route to a
+            Schumacher-equalling seventh drivers' title, despite missing a round with Covid-19. Add two wins for
+            Valtteri Bottas and it’s another dominant double crown for the Silver Arrows.
+            <a href="https://www.formula1.com/en/information/mercedes-year-by-year.45gq1OShE3U1H5iEJSVtNd">Read
+                Mercedes' full year-by-year profile ></a>
+        </p>
+
+    </section> -->
+
+
+    <!-- <section id="section2" class="section">
+        <section id="subsection1" class="section">
+            <img src="/static/images/teampage-images/lh.avif" alt="Team Images" class="driver" style="height: 450px; width: 680px;">
+        </section>
+        <section id="subsection2">
+            <strong style="font-size: 50px;">
+                <img src="/static/images/teampage-images/lh helmet.avif" alt="Lewis Hamilton Helmet" class="teamimage"
+                    style="height: 70px; width: 97px;">
+                <img src="/static/images/teampage-images/british flag.avif" alt="British Flag" class="driver"
+                    style="height: 70px; width: 97px;"><br>
+                44 Lewis Hamilton</strong>
+            <p><strong>Team:</strong> Mercedes</p>
+            <p><strong>Country:</strong> United Kingdom</p>
+            <p><strong>Podiums:</strong> 202</p>
+            <p><strong>Points:</strong> 4862.5</p>
+            <p><strong>Grands Prix entered:</strong> 356</p>
+            <p><strong>World Championships:</strong> 7</p>
+            <p><strong>Highest race finish:</strong> 1 (x105)</p>
+            <p><strong>Highest grid position:</strong> 1</p>
+            <p><strong>Date of birth:</strong> 07/01/1985</p>
+            <p><strong>Place of birth:</strong>
+                Stevenage, England</p>
+        </section>
+    </section>
+
+    <section id="section2" class="section">
+        <section id="subsection2">
+            <strong style="font-size: 50px;">
+                <img src="/static/images/teampage-images/gr helmet.avif" alt="George Russel Helmet" class="teamimage"
+                    style="height: 70px; width: 100px;">
+                <img src="/static/images/teampage-images/british flag.avif" alt="British Flag" class="driver"
+                    style="height: 70px; width: 97px;"><br>
+                63 George Russell
+            </strong>
+            <p><strong>Team:</strong> Mercedes</p>
+            <p><strong>Country:</strong> United Kingdom
+            </p>
+            <p><strong>Podiums:</strong> 15</p>
+            <p><strong>Points:</strong> 714</p>
+            <p><strong>Grands Prix entered:</strong> 128</p>
+            <p><strong>World Championships:</strong> 0
+            </p>
+            <p><strong>Highest race finish:</strong> 1 (x3)</p>
+            <p><strong>Highest grid position:</strong> 1</p>
+            <p><strong>Date of birth:</strong> 15/02/1998</p>
+            <p><strong>Place of birth:</strong> Hasselt, Belgium</p>
+        </section>
+        <section id="subsection1" class="section">
+            <img src="/static/images/teampage-images/gr.avif" alt="Team Images" class="driver" style="height: 450px; width: 700px;">
+        </section>
+    </section> -->
+
+          <!-- bottom -->
+          <div class="container bottombar">
+            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+              <div class="col-md-4 d-flex align-items-center">
+                <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+                  <img src="/static/images/Screenshot_2025-03-10_221101-removebg-preview.png" alt="logo" class="headimg">
+                </a>
+                <span class="mb-3 mb-md-0 text-secondary">© 2025 RaceMetrics Inc</span>
+              </div>
+          
+              <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+                <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+                <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+              </ul>
+            </footer>
+          </div>
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="/js/teams.js"></script>
+</html>
